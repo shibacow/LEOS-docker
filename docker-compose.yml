@@ -10,6 +10,7 @@ services:
     ports:
       - "9099:9099"
     command: ./run-annotate.sh
+    restart: always
   user-repository:
     build: 
       context: .
@@ -17,6 +18,7 @@ services:
     ports:
       - "9095:9095"
     command: ./run-user-repository.sh
+    restart: always
   repository:
     build:
       context: .
@@ -24,6 +26,7 @@ services:
     ports:
       - "9090:9090"
     command: ./run-repository.sh
+    restart: always
   leos:
     build: 
       context: .
@@ -34,6 +37,7 @@ services:
       - ./leos.properties:/root/LEOS/modules/config/src/main/filters/leos.properties
       - ./run-leos.sh:/root/LEOS/run-leso.sh
     command: ./run-leos.sh
+    restart: always
     depends_on:
       - annotate
       - user-repository
@@ -43,11 +47,13 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    restart: always
     ports:
       - "9096:9096"
     command: ./run-akn4euutil.sh
   nginx:
     image: nginx:latest
+    restart: always
     ports:
       - "80:80"
     volumes:

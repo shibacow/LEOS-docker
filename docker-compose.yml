@@ -8,7 +8,7 @@ services:
     volumes:
       - ./local.properties:/root/LEOS/modules/annotate/config/src/main/filters/local.properties
     ports:
-      - "8099:8099"
+      - "9099:9099"
     command: ./run-annotate.sh
   user-repository:
     build: 

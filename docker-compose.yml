@@ -32,7 +32,13 @@ services:
       - "8080:8080"
     volumes:
       - ./leos.properties:/root/LEOS/modules/config/src/main/filters/leos.properties
+      - ./run-leos.sh:/root/LEOS/run-leso.sh
     command: ./run-leos.sh
+    depends_on:
+      - annotate
+      - user-repository
+      - akn4euutil
+      - repository
   akn4euutil:
     build: 
       context: .

@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: annotate
+    hostname: annotate
     volumes:
       - ./local.properties:/root/LEOS/modules/annotate/config/src/main/filters/local.properties
     ports:
@@ -15,6 +17,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    container_name: user-repository
+    hostname: user-repository
     ports:
       - "9095:9095"
     command: ./run-user-repository.sh
@@ -23,6 +27,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: repository
+    hostname: repository
     ports:
       - "9090:9090"
     command: ./run-repository.sh
@@ -31,6 +37,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    container_name: leos
+    hostname: leos
     ports:
       - "8080:8080"
     volumes:
@@ -47,12 +55,16 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    container_name: akn4euutil
+    hostname: akn4euutil
     restart: always
     ports:
       - "9096:9096"
     command: ./run-akn4euutil.sh
   nginx:
     image: nginx:latest
+    container_name: nginx
+    hostname: nginx
     restart: always
     ports:
       - "80:80"

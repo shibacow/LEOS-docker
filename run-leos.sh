@@ -18,8 +18,9 @@
 echo "---------------------LEOS-----------------------------------------------"
 
 echo "---------------------LEOS COMPILING...----------------------------------"
-mvn install -DskipTests=true
+#mvn install -DskipTests=true
 #mvn clean install
+mvn install
 
 echo "---------------------LEOS COMPILED.-------------------------------------"
 

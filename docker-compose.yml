@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  annotate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./local.properties:/root/LEOS/modules/annotate/config/src/main/filters/local.properties
+    ports:
+      - "8099:8099"
+    command: ./run-annotate.sh
+  user-repository:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9095:9095"
+    command: ./run-user-repository.sh
+  repository:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    command: ./run-repository.sh
+  leos:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./leos.properties:/root/LEOS/modules/config/src/main/filters/leos.properties
+    command: ./run-leos.sh
+  akn4euutil:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9096:9096"
+    command: ./run-akn4euutil.sh

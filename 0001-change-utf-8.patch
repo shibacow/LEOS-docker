@@ -1,0 +1,83 @@
+From bd2fc5b9a5c01032f265b512917cd89a58272213 Mon Sep 17 00:00:00 2001
+From: shibacow <shibacow@gmail.com>
+Date: Sat, 19 Mar 2022 16:32:02 +0900
+Subject: [PATCH] change utf-8
+
+---
+ modules/ui/src/main/assets/scss/annex.scss       | 2 +-
+ modules/ui/src/main/assets/scss/bill.scss        | 2 +-
+ modules/ui/src/main/assets/scss/explanatory.scss | 2 +-
+ modules/ui/src/main/assets/scss/memorandum.scss  | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/modules/ui/src/main/assets/scss/annex.scss b/modules/ui/src/main/assets/scss/annex.scss
+index 546005e..e1eb306 100644
+--- a/modules/ui/src/main/assets/scss/annex.scss
++++ b/modules/ui/src/main/assets/scss/annex.scss
+@@ -1,3 +1,4 @@
++@charset "UTF-8";
+ //
+ // Copyright 2021 European Commission
+ //
+@@ -12,7 +13,6 @@
+ // See the Licence for the specific language governing permissions and limitations under the Licence.
+ //
+ 
+-@charset "UTF-8";
+ /**
+  * Copyright 2019 European Commission
+  *
+diff --git a/modules/ui/src/main/assets/scss/bill.scss b/modules/ui/src/main/assets/scss/bill.scss
+index 338c266..a59f615 100644
+--- a/modules/ui/src/main/assets/scss/bill.scss
++++ b/modules/ui/src/main/assets/scss/bill.scss
+@@ -1,3 +1,4 @@
++@charset "UTF-8";
+ //
+ // Copyright 2021 European Commission
+ //
+@@ -12,7 +13,6 @@
+ // See the Licence for the specific language governing permissions and limitations under the Licence.
+ //
+ 
+-@charset "UTF-8";
+ /**
+  * Copyright 2019 European Commission
+  *
+diff --git a/modules/ui/src/main/assets/scss/explanatory.scss b/modules/ui/src/main/assets/scss/explanatory.scss
+index ced39f3..12146d0 100644
+--- a/modules/ui/src/main/assets/scss/explanatory.scss
++++ b/modules/ui/src/main/assets/scss/explanatory.scss
+@@ -1,3 +1,4 @@
++@charset "UTF-8";
+ //
+ // Copyright 2021 European Commission
+ //
+@@ -12,7 +13,6 @@
+ // See the Licence for the specific language governing permissions and limitations under the Licence.
+ //
+ 
+-@charset "UTF-8";
+ /**
+  * Copyright 2019 European Commission
+  *
+diff --git a/modules/ui/src/main/assets/scss/memorandum.scss b/modules/ui/src/main/assets/scss/memorandum.scss
+index debd635..9800e00 100644
+--- a/modules/ui/src/main/assets/scss/memorandum.scss
++++ b/modules/ui/src/main/assets/scss/memorandum.scss
+@@ -1,3 +1,4 @@
++@charset "UTF-8";
+ //
+ // Copyright 2021 European Commission
+ //
+@@ -12,7 +13,6 @@
+ // See the Licence for the specific language governing permissions and limitations under the Licence.
+ //
+ 
+-@charset "UTF-8";
+ /**
+  * Copyright 2019 European Commission
+  *
+-- 
+2.20.1.windows.1
+

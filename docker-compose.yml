@@ -46,3 +46,11 @@ services:
     ports:
       - "9096:9096"
     command: ./run-akn4euutil.sh
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - leos
